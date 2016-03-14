@@ -13,7 +13,7 @@ data:extend(
   {
     type = "resource",
     name = "superheated-steam",
-    icon = "__base__/graphics/icons/crude-oil.png",
+    icon = "__Clean_Energy__/graphics/geothermal-deposit.png",
     flags = {"placeable-neutral"},
     category = "basic-fluid",
     order="a-b-a",
@@ -62,7 +62,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__base__/graphics/entity/crude-oil/crude-oil.png",
+        filename = "__Clean_Energy__/graphics/geothermal-deposit.png",
         priority = "extra-high",
         width = 75,
         height = 61,

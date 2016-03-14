@@ -79,6 +79,7 @@ data:extend
   min_perceived_performance = 0.25,
   performance_to_sound_speedup = 0.5
   },
+  
   {
   type = "generator",
   name = "geothermal-generator",
@@ -98,16 +99,16 @@ data:extend
       percent = 70
     }
   },
-  collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
-  selection_box = {{-1, -1}, {1, 1}},
+  collision_box = {{-2.35, -2.35}, {2.35, 2.35}},
+  selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   fluid_box =
   {
     base_area = 1,
     pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 0.6} },
-      { position = {0, -1} },
+      { position = {0, 3} },
+      { position = {0, -3} },
     },
   },
   energy_source =
@@ -117,18 +118,18 @@ data:extend
   },
   horizontal_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-icon.png",
-    width = 32,
-    height = 32,
+    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
+    width = 160,
+    height = 160,
     frame_count = 1,
     line_length = 1,
     shift = {1.34, -0.06}
   },
   vertical_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-icon.png",
-    width = 32,
-    height = 32,
+    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
+    width = 160,
+    height = 160,
     frame_count = 1,
     line_length = 1,
     shift = {0.812, 0.03125}
@@ -157,7 +158,7 @@ data:extend
   },
   min_perceived_performance = 0.25,
   performance_to_sound_speedup = 0.5
-  },
+},
 
 {
 	type = "fluid",
@@ -171,5 +172,5 @@ data:extend
     order = "a[fluid]-z[superheated-steam]",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-	},
+},
 })

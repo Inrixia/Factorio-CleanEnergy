@@ -33,8 +33,6 @@ end)
 function manage_temperature() --/ Manipulates fluids inside tidal generators
 	local first_player = game.players[1]
 	pos = first_player.position
-	thing = game.get_surface(1).find_entities_filtered{area = {{pos.x}, {pos.y}}, name= "superheated-steam"}
-	first_player.print(thing.name)
    	if global.tidal_generator ~= nil then
   	    for k,tid in pairs(global.tidal_generator) do --/ For every tidal generator in the global tidal generator table
 				if tid.valid then
