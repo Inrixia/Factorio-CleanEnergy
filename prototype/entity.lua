@@ -2,11 +2,11 @@ data:extend
 ({
   {
   type = "generator",
-  name = "tidal-generator",
-  icon = "__Clean_Energy__/graphics/tidal.png",
+  name = "hydro-generator",
+  icon = "__Clean_Energy__/graphics/hydro.png",
   flags = {"placeable-neutral", "player-creation"},
   collision_mask = {"object-layer", "ground-tile"},
-  minable = {mining_time = 1, result = "tidal-generator"},
+  minable = {mining_time = 1, result = "hydro-generator"},
   max_health = 300,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
@@ -14,12 +14,8 @@ data:extend
   fluid_usage_per_tick = 0.03,
   resistances =
   {
-    {
-      type = "fire",
-      percent = 70
-    }
   },
-  collision_box = {{-2.35, -2.35}, {2.35, 2.35}},
+  collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
   selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
   fluid_box =
   {
@@ -36,7 +32,7 @@ data:extend
   },
   horizontal_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal.png",
+    filename = "__Clean_Energy__/graphics/hydro.png",
     width = 96,
     height = 96,
     frame_count = 1,
@@ -44,7 +40,7 @@ data:extend
   },
   vertical_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal.png",
+    filename = "__Clean_Energy__/graphics/hydro.png",
     width = 96,
     height = 96,
     frame_count = 1,
@@ -67,7 +63,7 @@ data:extend
   {
     sound =
     {
-      filename = "__base__/sound/steam-engine-90bpm.ogg",
+      filename = "__base__/sound/idle1.ogg",
       volume = 0.6
     },
     match_speed_to_activity = true,
@@ -79,23 +75,19 @@ data:extend
   {
   type = "generator",
   name = "geothermal-generator",
-  icon = "__Clean_Energy__/graphics/tidal.png",
+  icon = "__Clean_Energy__/graphics/thermal-icon.png",
   flags = {"placeable-neutral", "player-creation"},
   collision_mask = {"object-layer", "player-layer", "water-tile", "item-layer",},
-  minable = {mining_time = 1, result = "tidal-generator"},
+  minable = {mining_time = 1, result = "geothermal-generator"},
   max_health = 300,
   corpse = "big-remnants",
-  dying_explosion = "medium-explosion",
+  dying_explosion = "big-explosion",
   effectivity = 1,
   fluid_usage_per_tick = 0.1,
   resistances =
   {
-    {
-      type = "fire",
-      percent = 70
-    }
   },
-  collision_box = {{-1.35, -2.35}, {1.35, 1.35}},
+  collision_box = {{-1.5, -2.35}, {1.5, 2.35}},
   selection_box = {{-1.5, -2.5}, {1.5, 1.5}},
   fluid_box =
   {
@@ -135,7 +127,7 @@ data:extend
       name = "light-smoke",
       north_position = {0, -1.7},
       east_position = {-1.0, -1.0},
-      frequency = 0.6,
+      frequency = 1,
       starting_vertical_speed = 0.08,
       slow_down_factor = 1,
       starting_frame_deviation = 60,
@@ -146,7 +138,7 @@ data:extend
   {
     sound =
     {
-      filename = "__base__/sound/steam-engine-90bpm.ogg",
+      filename = "__base__/sound/electric-furnace.ogg",
       volume = 0.6
     },
     match_speed_to_activity = true,

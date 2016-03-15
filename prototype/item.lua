@@ -1,12 +1,12 @@
 data:extend({
 	{
 		type = "item",
-		name = "tidal-generator",
-		icon = "__Clean_Energy__/graphics/tidal.png",
+		name = "hydro-generator",
+		icon = "__Clean_Energy__/graphics/hydro-icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy",	
-		order = "b[steam-power]-c[tidal-generator]",		
-		place_result = "tidal-generator",
+		order = "b[steam-power]-c[hydro-generator]",		
+		place_result = "hydro-generator",
 		stack_size = 24,
 	},
 	{
