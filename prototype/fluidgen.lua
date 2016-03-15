@@ -2,17 +2,17 @@ data:extend(
 {
   {
     type = "noise-layer",
-    name = "superheated-steam"
+    name = "geothermal-deposit"
   },
   {
     type = "autoplace-control",
-    name = "superheated-steam",
+    name = "geothermal-deposit",
     richness = true,
     order = "b-a"
   },
   {
     type = "resource",
-    name = "superheated-steam",
+    name = "geothermal-deposit",
     icon = "__Clean_Energy__/graphics/geothermal-deposit.png",
     flags = {"placeable-neutral"},
     category = "basic-fluid",
@@ -32,7 +32,7 @@ data:extend(
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
     autoplace =
     {
-      control = "superheated-steam",
+      control = "geothermal-deposit",
       sharpness = 1,
       max_probability = 0.04,
       richness_multiplier = 150000,
@@ -51,7 +51,7 @@ data:extend(
         },
         {
           influence = 0.67,
-          noise_layer = "superheated-steam",
+          noise_layer = "geothermal-deposit",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
         }
