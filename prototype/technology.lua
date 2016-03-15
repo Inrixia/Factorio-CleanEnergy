@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "tidal-power",
-    icon = "__Clean_Energy__/graphics/tidal-generator-research.png",
+    icon = "__Clean_Energy__/graphics/tidal.png",
     icon_size = 160,
     effects =
     {

@@ -17,7 +17,7 @@ data:extend(
     flags = {"placeable-neutral"},
     category = "basic-fluid",
     order="a-b-a",
-    infinite = true,
+    infinite = false,
     minimum = 750,
     normal = 7500,
     minable =

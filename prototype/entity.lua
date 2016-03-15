@@ -3,9 +3,9 @@ data:extend
   {
   type = "generator",
   name = "tidal-generator",
-  icon = "__Clean_Energy__/graphics/tidal-generator-icon.png",
+  icon = "__Clean_Energy__/graphics/tidal.png",
   flags = {"placeable-neutral", "player-creation"},
-  collision_mask = {"object-layer"},
+  collision_mask = {"object-layer", "ground-tile"},
   minable = {mining_time = 1, result = "tidal-generator"},
   max_health = 300,
   corpse = "big-remnants",
@@ -27,8 +27,6 @@ data:extend
     pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 3} },
-      { position = {0, -3} },
     },
   },
   energy_source =
@@ -38,21 +36,19 @@ data:extend
   },
   horizontal_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
-    width = 160,
-    height = 160,
+    filename = "__Clean_Energy__/graphics/tidal.png",
+    width = 96,
+    height = 96,
     frame_count = 1,
     line_length = 1,
-    shift = {1.34, -0.06}
   },
   vertical_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
-    width = 160,
-    height = 160,
+    filename = "__Clean_Energy__/graphics/tidal.png",
+    width = 96,
+    height = 96,
     frame_count = 1,
     line_length = 1,
-    shift = {0.812, 0.03125}
   },
   smoke =
   {
@@ -83,9 +79,9 @@ data:extend
   {
   type = "generator",
   name = "geothermal-generator",
-  icon = "__Clean_Energy__/graphics/tidal-generator-icon.png",
+  icon = "__Clean_Energy__/graphics/tidal.png",
   flags = {"placeable-neutral", "player-creation"},
-  collision_mask = {"object-layer"},
+  collision_mask = {"object-layer", "player-layer", "water-tile", "item-layer",},
   minable = {mining_time = 1, result = "tidal-generator"},
   max_health = 300,
   corpse = "big-remnants",
@@ -99,15 +95,14 @@ data:extend
       percent = 70
     }
   },
-  collision_box = {{-2.35, -2.35}, {2.35, 2.35}},
-  selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+  collision_box = {{-1.35, -2.35}, {1.35, 1.35}},
+  selection_box = {{-1.5, -2.5}, {1.5, 1.5}},
   fluid_box =
   {
     base_area = 1,
     pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      { position = {0, 3} },
       { position = {0, -3} },
     },
   },
@@ -118,32 +113,32 @@ data:extend
   },
   horizontal_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
-    width = 160,
-    height = 160,
-    frame_count = 1,
-    line_length = 1,
-    shift = {1.34, -0.06}
+	filename = "__Clean_Energy__/graphics/thermal.png",
+   	width = 128,
+   	height = 150,
+   	frame_count = 1,
+   	line_length = 1,
+   	shift = {0.55, -0.33}
   },
   vertical_animation =
   {
-    filename = "__Clean_Energy__/graphics/tidal-generator-research.png",
-    width = 160,
-    height = 160,
-    frame_count = 1,
-    line_length = 1,
-    shift = {0.812, 0.03125}
+	filename = "__Clean_Energy__/graphics/thermal.png",
+   	width = 128,
+   	height = 150,
+   	frame_count = 1,
+   	line_length = 1,
+   	shift = {0.55, -0.33}
   },
   smoke =
   {
     {
       name = "light-smoke",
-      north_position = {0.9, 0.0},
-      east_position = {-2.0, -2.0},
-      frequency = 10 / 32,
+      north_position = {0, -1.7},
+      east_position = {-1.0, -1.0},
+      frequency = 0.6,
       starting_vertical_speed = 0.08,
       slow_down_factor = 1,
-      starting_frame_deviation = 60
+      starting_frame_deviation = 60,
     }
   },
   vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

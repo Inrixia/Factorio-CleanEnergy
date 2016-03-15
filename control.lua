@@ -8,6 +8,13 @@ script.on_event(defines.events.on_tick, function(event)
 
 end)
 
+script.on_event(defines.events.on_chunk_generated, function(event)
+ 	for _,entity in pairs(game.get_surface(1).find_entities_filtered{ area=event.area, name="geothermal-deposit"}) do 
+ 		entity.amount = 24000 * (math.random(100, 200)/100)
+ 	end
+
+end)
+
 script.on_event(defines.events.on_built_entity, function(event) --/ Runs following code when entity is built
 	if event.created_entity.name == "tidal-generator" then
 		local tidal_generator = event.created_entity
@@ -46,7 +53,6 @@ end)
 
 function manage_temperature() --/ Manipulates fluids inside tidal generators
 	local first_player = game.players[1]
-	pos = first_player.position
 
    	if global.tidal_generator ~= nil then
   	    for k,tid in pairs(global.tidal_generator) do --/ For every tidal generator in the global tidal generator table
@@ -76,16 +82,16 @@ function manage_temperature() --/ Manipulates fluids inside tidal generators
          			if tid.fluidbox[1] ~= nil then --/ If the fluidbox is not empty
          				fluid = tid.fluidbox[1] --/ Copy feilds from fluidbox of tidal generator to tidgen
 						pos = tid.position
-  						tile = game.get_surface(1).get_tile(pos.x, pos.y)
  						for _,entity in pairs(game.get_surface(1).find_entities_filtered{ area={{pos.x-1, pos.y-1},{pos.x+1, pos.y+1}}, name="geothermal-deposit"}) do 
-							geodep = entity
+ 							if (game.tick % 125) == 0 then
+ 								entity.amount = entity.amount - 1
+ 								first_player.print(entity.amount)
+ 							end
 							first_player.print("Geothermal Deposit Detected")
 							fluid.temperature = 100
 							if entity.amount == 1 then
-								geodep.destroy()
+								entity.destroy()
 							end
-							entity.amount = 1
-							first_player.print(entity.amount)
  						end
 						tid.fluidbox[1] = fluid --/ Copy the updated feilds from tidgens fluid box to tidal gen (Overwriting and creating the new value/temperature)
 					end

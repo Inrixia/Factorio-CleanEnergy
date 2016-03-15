@@ -2,7 +2,7 @@ data:extend({
 	{
 		type = "item",
 		name = "tidal-generator",
-		icon = "__Clean_Energy__/graphics/tidal-generator-icon.png",
+		icon = "__Clean_Energy__/graphics/tidal.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy",	
 		order = "b[steam-power]-c[tidal-generator]",		
@@ -12,7 +12,7 @@ data:extend({
 	{
 		type = "item",
 		name = "geothermal-generator",
-		icon = "__Clean_Energy__/graphics/tidal-generator-icon.png",
+		icon = "__Clean_Energy__/graphics/thermal-icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy",	
 		order = "b[steam-power]-d[geothermal-generator]",		
