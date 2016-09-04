@@ -15,8 +15,8 @@ data:extend
   resistances =
   {
   },
-  collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-  selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+  collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+  selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
   fluid_box =
   {
     base_area = 1,

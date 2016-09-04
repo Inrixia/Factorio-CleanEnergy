@@ -67,7 +67,6 @@ function manage_temperature() --/ Manipulates fluids inside hydro generators
 							fluid.amount = 10
 							fluid.temperature = 100 --/ Manipluate the temperature of tidgens fluid box
 						end
-						first_player.print(tile.name)
 						tid.fluidbox[1] = fluid --/ Copy the updated feilds from tidgens fluid box to hydro gen (Overwriting and creating the new value/temperature)
 					end
 				end
